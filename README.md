@@ -1,6 +1,6 @@
 # C# Fundamental Assignemnt 1
 
-Practice the value types in C#
+Practice fundamental C#
 
 ## Requirements
 
