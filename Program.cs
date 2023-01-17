@@ -13,7 +13,7 @@ namespace CSharpFundamental
             Console.WriteLine(newText); // expect to see "This Is A Text"
 
             /* Challenge 2 */
-            int[,] arrayA = { { 3, 5, 4 }, { 3, 7, 8 } };
+            int[,] arrayA = { { 3, 5, 4, 6 }, { 3, 7, 8, 3 } };
             int[,] arrayB = { { 5, 1 }, { 8, 4 }, { 2, 9 }, { 2, 3 } };
             int[,] result = matrixMultiply(arrayA, arrayB);
             Console.WriteLine(result); //share your findings to Slack
