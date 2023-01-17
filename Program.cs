@@ -9,8 +9,8 @@ namespace CSharpFundamental
         {
             /* Challenge 1 */
             string text = "this is a text";
-            toTitleCase(text);
-            Console.WriteLine(text); // expect to see "This Is A Text"
+            string newText = toTitleCase(text);
+            Console.WriteLine(newText); // expect to see "This Is A Text"
 
             /* Challenge 2 */
             int[,] arrayA = { { 3, 5, 4 }, { 3, 7, 8 } };
@@ -18,11 +18,11 @@ namespace CSharpFundamental
             int[,] result = matrixMultiply(arrayA, arrayB);
             Console.WriteLine(result); //share your findings to Slack
         }
-        static int[,] toTitleCase(string input)
+        static string toTitleCase(string input)
         {
             /* Write your code here */
         }
-        static void matrixMultiply(int[,] array1, int[,] array2)
+        static int[,] matrixMultiply(int[,] array1, int[,] array2)
         {
             /* Write your code here */
         }
