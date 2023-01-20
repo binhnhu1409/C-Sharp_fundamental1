@@ -2,7 +2,7 @@
 
 Practice fundamental C#
 
-## Requirements
+## Tasks have been done
 
 Navigate to file Program.cs and provide logics for following function:
 

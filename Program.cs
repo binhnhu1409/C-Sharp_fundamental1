@@ -16,8 +16,8 @@ namespace CSharpFundamental
       /* Challenge 2 */
       int[,] arrayA = { { 3, 5, 4, 6 }, { 3, 7, 8, 3 } };
       int[,] arrayB = { { 5, 1 }, { 8, 4 }, { 2, 9 }, { 2, 3 } };
-      // int[,] result = matrixMultiply(arrayA, arrayB);
-      // Console.WriteLine(result); //share your findings to Slack
+      int[,] result = matrixMultiply(arrayA, arrayB);
+      Console.WriteLine(result); //share your findings to Slack
     }
     static string toTitleCase(string input)
     {
@@ -35,9 +35,28 @@ namespace CSharpFundamental
       }
       return upperText;
     }
-    // static int[,] matrixMultiply(int[,] array1, int[,] array2)
-    // {
-    //     /* Write your code here */
-    // }
+    static int[,] matrixMultiply(int[,] array1, int[,] array2)
+    {
+      /* Write your code here */
+      if (array1.GetLength(1) != (array2.GetLength(0)))
+      {
+        throw new ArgumentException("These 2 arrays cannot multiply with each other");
+      }
+      int[,] result = new int[array1.GetLength(0), array2.GetLength(1)];
+      for (int i = 0; i < array1.GetLength(0); i++)
+      {
+        for (int n = 0; n < array2.GetLength(1); n++)
+        {
+          var loopResult = 0;
+          for (int j = 0; j < array1.GetLength(1); j++)
+          {
+            loopResult += array1[i, j] * array2[j, n];
+          }
+          result[i, n] = loopResult;
+          // Console.WriteLine(result[i, n]);
+        }
+      }
+      return result;
+    }
   }
 }
